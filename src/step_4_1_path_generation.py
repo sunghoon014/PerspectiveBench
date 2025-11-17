@@ -5,8 +5,8 @@ import networkx as nx
 import numpy as np
 
 from config.utils import Configuration, init_config
-from utils.io import load_json, save_json
-from utils.logger import logger
+from src.utils.io import load_json, save_json
+from src.utils.logger import logger
 
 random.seed(104)
 

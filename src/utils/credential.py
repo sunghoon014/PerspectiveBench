@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from llm_clients.openai_client import OpenAILLMClient
-from utils.logger import logger
+from src.llm_clients.openai_client import OpenAILLMClient
+from src.utils.logger import logger
 
 
 def create_openai_llm_client(model_config: dict, config: dict) -> OpenAILLMClient:

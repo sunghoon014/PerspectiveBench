@@ -11,7 +11,7 @@ from tenacity import (
     wait_random_exponential,
 )
 
-from utils.logger import logger
+from src.utils.logger import logger
 
 REASONING_MODELS = ["o1", "o3-mini", "openai/o3-mini", "openai/o4-mini"]
 

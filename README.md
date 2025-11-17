@@ -16,16 +16,17 @@ This project is a sophisticated pipeline designed to transform raw text from var
 PerspectiveBench/
 ├── config/                  # Configuration files (env, yaml)
 ├── dataset/                 # Raw and processed data
-├── llm_clients/             # Clients for interacting with LLMs (OpenAI)
-├── utils/                   # Utility scripts (I/O, logging, etc.)
-├── step_1_extract_fact.py
-├── step_2_1_clustering.py
-├── step_2_2_summary.py
-├── step_3_1_filtering.py
-├── step_3_2_relation.py
-├── step_4_1_path_generation.py
-├── step_4_2_question_generation.py
-├── step_4_3_focus_evidence.py
+├── src/                     # Source code
+│   ├── llm_clients/         # Clients for interacting with LLMs (OpenAI)
+│   ├── utils/               # Utility scripts (I/O, logging, etc.)
+│   ├── step_1_extract_fact.py
+│   ├── step_2_1_clustering.py
+│   ├── step_2_2_summary.py
+│   ├── step_3_1_filtering.py
+│   ├── step_3_2_relation.py
+│   ├── step_4_1_path_generation.py
+│   ├── step_4_2_question_generation.py
+│   └── step_4_3_focus_evidence.py
 ├── pyproject.toml           # Project dependencies
 ├── README.md
 └── env.sample               # Environment variable template
@@ -85,17 +86,17 @@ The pipeline is organized into sequential steps, with each script performing a d
 
 ## Usage
 
-To run the full pipeline, execute the Python scripts in sequential order. Ensure your `.env` file is correctly configured and the virtual environment is active.
+To run the full pipeline, execute the Python scripts in sequential order from the project root directory. Ensure your `.env` file is correctly configured and the virtual environment is active.
 
 ```bash
-python step_1_extract_fact.py
-python step_2_1_clustering.py
-python step_2_2_summary.py
-python step_3_1_filtering.py
-python step_3_2_relation.py
-python step_4_1_path_generation.py
-python step_4_2_question_generation.py
-python step_4_3_focus_evidence.py
+python src/step_1_extract_fact.py
+python src/step_2_1_clustering.py
+python src/step_2_2_summary.py
+python src/step_3_1_filtering.py
+python src/step_3_2_relation.py
+python src/step_4_1_path_generation.py
+python src/step_4_2_question_generation.py
+python src/step_4_3_focus_evidence.py
 ```
 
 Each script will generate output in the `dataset/` directory, which will be used as input for the subsequent script.

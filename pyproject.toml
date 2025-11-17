@@ -63,4 +63,4 @@ unfixable = ["F401", "F841"]
 convention = "google"
 
 [tool.ruff.lint.isort]
-known-first-party = ["llm_client", "utils"]
+known-first-party = ["src"]

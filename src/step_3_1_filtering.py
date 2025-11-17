@@ -5,8 +5,8 @@ from itertools import combinations
 from tqdm import tqdm
 
 from config.utils import Configuration, init_config
-from utils.io import load_json, save_json
-from utils.logger import logger
+from src.utils.io import load_json, save_json
+from src.utils.logger import logger
 
 
 def load_cluster_data(input_dir: str) -> tuple[dict[int, list[dict]], list[dict]]:
@@ -124,7 +124,9 @@ def main():
     # 1. Load cluster data
     clusters = load_cluster_data(input_dir)
     if not clusters:
-        logger.error("No cluster data found. Please check the results of the previous step.")
+        logger.error(
+            "No cluster data found. Please check the results of the previous step."
+        )
         return
 
     # 3. Generate candidate pairs

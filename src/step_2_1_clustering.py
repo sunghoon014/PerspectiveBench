@@ -12,8 +12,8 @@ from transformers import AutoModel, AutoTokenizer
 from umap import UMAP
 
 from config.utils import Configuration, init_config
-from utils.io import load_json, save_json
-from utils.logger import logger
+from src.utils.io import load_json, save_json
+from src.utils.logger import logger
 
 
 def load_fact_data(input_dir: str) -> tuple[list[dict], list[str]]:
@@ -151,9 +151,7 @@ def main():
 
         save_path = os.path.join(output_dir, filename)
         save_json(save_path, cluster_fact)
-        logger.info(
-            f"Topic {topic_id} ({len(cluster_fact)} facts) saved: {save_path}"
-        )
+        logger.info(f"Topic {topic_id} ({len(cluster_fact)} facts) saved: {save_path}")
 
     # Save topic summary information
     topic_info = topic_model.get_topic_info()

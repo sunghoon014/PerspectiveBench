@@ -4,10 +4,10 @@ import random
 from tqdm import tqdm
 
 from config.utils import Configuration, init_config
-from utils.credential import create_openai_llm_client
-from utils.io import load_json, save_json
-from utils.logger import logger
-from utils.processor import parse_json
+from src.utils.credential import create_openai_llm_client
+from src.utils.io import load_json, save_json
+from src.utils.logger import logger
+from src.utils.processor import parse_json
 
 random.seed(104)
 

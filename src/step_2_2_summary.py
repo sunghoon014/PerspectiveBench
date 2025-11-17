@@ -4,9 +4,9 @@ import pandas as pd
 from tqdm import tqdm
 
 from config.utils import Configuration, init_config
-from utils.credential import create_openai_llm_client
-from utils.io import load_json, save_json
-from utils.logger import logger
+from src.utils.credential import create_openai_llm_client
+from src.utils.io import load_json, save_json
+from src.utils.logger import logger
 
 
 def load_cluster_data(input_dir: str) -> tuple[dict[int, list[dict]], list[dict]]:
@@ -46,13 +46,17 @@ def main():
     # 1. Load cluster data
     clusters = load_cluster_data(input_dir)
     if not clusters:
-        logger.error("No cluster data found. Please check the results of the previous step.")
+        logger.error(
+            "No cluster data found. Please check the results of the previous step."
+        )
         return
 
     # 2. Summarize clusters
     system_prompt = summary_config["system_prompt"]
     llm_client = create_openai_llm_client(summary_config, config)
-    for topic_id, cluster in tqdm(clusters.items(), desc="Generating cluster summaries"):
+    for topic_id, cluster in tqdm(
+        clusters.items(), desc="Generating cluster summaries"
+    ):
         topic_representation = cluster["topic_representation"]
         cleaned_facts = [
             {
