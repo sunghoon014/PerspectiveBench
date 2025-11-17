@@ -1,0 +1,109 @@
+{
+    // Python 파일에 대한 설정
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always",
+            "source.organizeImports.ruff": "always"
+        },
+        "editor.rulers": [
+            120
+        ] // 라인 길이 제한을 120으로 설정
+    },
+    // JSON 파일에 대한 설정
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    // JSONC 파일에 대한 설정 (주석이 포함된 JSON)
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    // TOML 파일에 대해 Even Better TOML 포매터 사용
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    // Python 분석 및 환경 설정
+    "python.analysis.enableEditableInstalls": true, // PEP 660 지원
+    "python.analysis.usePullDiagnostics": true, // 더 빠른 진단
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.indexing": true,
+    // 터미널 환경 자동 활성화
+    "python.terminal.activateEnvironment": true,
+    // 기본 인터프리터 경로 설정 (uv가 만든 가상환경 우선 사용)
+    "python.defaultInterpreterPath": "./.venv/bin/python",
+    // pre-commit-helper 관련 설정
+    "pre-commit-helper.runOnSave": "none",
+    "pre-commit-helper.config": ".pre-commit-config.yaml",
+    // Even Better TOML 스키마 사용
+    "evenBetterToml.schema.enabled": true,
+    "evenBetterToml.schema.associations": {
+        "^.+config[/\\\\].+\\.toml$": "../config/schema.config.json"
+    },
+    // 파일 저장 시 설정
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    // 파라미터 힌트 활성화
+    "editor.parameterHints.enabled": true,
+    // uv 프로젝트에서 Python 환경 자동 감지
+    "python.venvPath": "./.venv",
+    "python.condaPath": "",
+    // 검색에서 가상환경 제외
+    "search.exclude": {
+        "**/.venv": true,
+        "**/node_modules": true,
+        "**/__pycache__": true
+    },
+    // 파일 감시에서 가상환경 제외
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/node_modules/**": true,
+        "**/__pycache__/**": true
+    },
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "altius",
+            "database": "altius",
+            "username": "root",
+            "askForPassword": true
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3307,
+            "driver": "MySQL",
+            "name": "boilerplate",
+            "database": "boilerplate",
+            "username": "root",
+            "askForPassword": true
+        }
+    ],
+    "cursorpyright.analysis.autoImportCompletions": true,
+    "cursorpyright.analysis.autoSearchPaths": true,
+    "cursorpyright.analysis.diagnosticMode": "workspace",
+    "notebook.output.wordWrap": true,
+    "notebook.formatOnSave.enabled": true, // 노트북 저장 시 자동으로 포맷합니다.
+    "notebook.output.scrolling": true, // 노트북 출력을 스크롤 가능하게 설정합니다.
+    "notebook.lineNumbers": "on", // 노트북에서 줄 번호를 표시합니다.
+}

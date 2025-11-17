@@ -1,0 +1,81 @@
+step_1_extract_fact:
+  model: google/gemini-2.5-flash
+  provider: openrouter # openrouter / openai
+  params:
+    max_tokens: 4096
+    temperature: 0.0
+  input_filepath: dataset/raw/biology_chunks.json
+  output_dir: dataset/processed/step1_extract_fact
+
+step_2_1_clustering:
+  input_dir: dataset/processed/step1_extract_fact
+  embedding_model: codefuse-ai/F2LLM-4B
+  batch_size: 32
+  seed: 104
+  deduplication_threshold: 0.95
+  umap_params:
+    n_neighbors: 15
+    n_components: 5
+    min_dist: 0.0
+    metric: "cosine"
+  hdbscan_params:
+    min_cluster_size: 10
+    metric: "euclidean"
+    cluster_selection_method: "eom"
+    prediction_data: True
+  vectorizer_params:
+    max_df: 0.8
+    stop_words: "english"
+    ngram_range: [1, 2]
+  ctfidf_params:
+    bm25_weighting: True
+  bertopic_params:
+    min_topic_size: 10
+  output_dir: dataset/processed/step2_clustering
+
+step_2_2_summary:
+  model: openai/gpt-4o
+  provider: openrouter # openrouter / openai
+  params:
+    max_tokens: 4096
+    temperature: 0.0
+  input_dir: dataset/processed/step2_clustering
+  output_dir: dataset/processed/step2_summary
+
+step_3_1_filtering:
+  input_dir: dataset/processed/step2_clustering
+  output_dir: dataset/processed/step3_filtering
+
+step_3_2_relation:
+  model: google/gemini-2.5-pro
+  provider: openrouter # openrouter / openai
+  params:
+    max_tokens: 16384
+    temperature: 0.0
+  initial_palette: dataset/raw/biology_init_palette.json
+  summary_dir: dataset/processed/step2_summary
+  candidate_filepath: dataset/processed/step3_filtering/candidate_pairs.json
+  output_dir: dataset/processed/step3_relation/relation_generation.json
+
+step_4_1_path_generation:
+  summary_dir: dataset/processed/step2_summary
+  relation_filepath: dataset/processed/step3_relation/relation_generation.json
+  output_filepath: dataset/processed/step4_path_generation/path_generation.json
+
+step_4_2_question_generation:
+  model: google/gemini-2.5-pro
+  provider: openrouter # openrouter / openai
+  params:
+    max_tokens: 16384
+    temperature: 0.0
+  path_filepath: dataset/processed/step4_path_generation/path_generation.json
+  output_dir: dataset/processed/step4_question_generation/
+
+step_4_3_focus_evidence:
+  model: google/gemini-2.5-pro
+  provider: openrouter # google / openrouter / openai
+  params:
+    max_tokens: 16384
+    temperature: 0.0
+  question_dir: dataset/processed/step4_question_generation/
+  output_dir: dataset/processed/step4_focus_evidence/

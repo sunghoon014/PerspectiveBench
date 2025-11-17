@@ -1,0 +1,79 @@
+{
+  "relation_palette_hypothesis": {
+    "causal_and_consequential_relations": {
+      "description": "역사적 사건의 '원인'과 '결과'를 다양한 '관점(e.g., 정치, 경제, 사회)'으로 세분화하여 설명합니다.",
+      "relations": [
+        {
+          "name": "IS_A_POLITICAL_CAUSE_OF",
+          "description": "정부, 정책, 동맹, 전쟁, 영토 변화 등 '정치적/군사적' 요인이 다른 사건의 원인이 됨.",
+          "example": "'Alliance System (WWI)' -> 'IS_A_POLITICAL_CAUSE_OF' -> 'Escalation of Conflict'"
+        },
+        {
+          "name": "IS_AN_ECONOMIC_CAUSE_OF",
+          "description": "무역, 자원, 산업, 자본, 노동, 계급 갈등 등 '경제적' 요인이 다른 사건의 원인이 됨.",
+          "example": "'Need for Raw Materials' -> 'IS_AN_ECONOMIC_CAUSE_OF' -> 'Imperialism'"
+        },
+        {
+          "name": "IS_A_SOCIAL_CAUSE_OF",
+          "description": "인구, 도시화, 문화, 종교, 젠더, 일상 생활의 변화 등 '사회적/문화적' 요인이 다른 사건의 원인이 됨.",
+          "example": "'Urbanization' -> 'IS_A_SOCIAL_CAUSE_OF' -> 'Changes in Family Structure'"
+        },
+        {
+          "name": "RESULTS_IN_POLITICAL_CHANGE",
+          "description": "사건이 '정치적' 결과(e.g., 새로운 국가 형성, 정부 붕괴, 조약 체결)를 초래함.",
+          "example": "'World War I' -> 'RESULTS_IN_POLITICAL_CHANGE' -> 'Collapse of Ottoman Empire'"
+        },
+        {
+          "name": "RESULTS_IN_ECONOMIC_CHANGE",
+          "description": "사건이 '경제적' 결과(e.g., 새로운 무역로, 경제 공황, 산업 구조 변화)를 초래함.",
+          "example": "'Industrial Revolution' -> 'RESULTS_IN_ECONOMIC_CHANGE' -> 'Rise of Capitalism'"
+        },
+        {
+          "name": "RESULTS_IN_SOCIAL_CHANGE",
+          "description": "사건이 '사회적' 결과(e.g., 새로운 사회 계급, 인권 신장, 민족주의 대두)를 초래함.",
+          "example": "'French Revolution' -> 'RESULTS_IN_SOCIAL_CHANGE' -> 'Rise of Nationalism'"
+        }
+      ]
+    },
+    "contextual_and_ideological_relations": {
+      "description": "사건이 발생한 '배경'이나 사건을 추동한 '사상(이데올로기)'을 설명합니다.",
+      "relations": [
+        {
+          "name": "PROVIDES_IDEOLOGICAL_BASIS_FOR",
+          "description": "특정 '사상'이나 '이념'이 다른 사건이나 운동의 '사상적 기반(정당성)'을 제공함.",
+          "example": "'The Enlightenment' -> 'PROVIDES_IDEOLOGICAL_BASIS_FOR' -> 'American Revolution'"
+        },
+        {
+          "name": "IS_A_CONTEXT_FOR",
+          "description": "특정 사건이나 시대적 상황이 다른 사건이 발생하는 '배경' 또는 '무대' 역할을 함.",
+          "example": "'The Great Depression' -> 'IS_A_CONTEXT_FOR' -> 'Rise of Fascism'"
+        }
+      ]
+    },
+    "narrative_and_comparative_relations": {
+      "description": "사건의 순서, 포함 관계, 또는 개념 간의 대조를 설명합니다.",
+      "relations": [
+        {
+          "name": "IS_PART_OF",
+          "description": "더 작은 사건이 더 큰 역사적 '시대'나 '사건'의 일부를 구성함.",
+          "example": "'The Reign of Terror' -> 'IS_PART_OF' -> 'The French Revolution'"
+        },
+        {
+          "name": "PRECEDES",
+          "description": "하나의 사건이 다른 사건보다 '시간적'으로 먼저 발생함. (물리학의 '논리적 선행'과 달리 '연대기적 선행'에 초점)",
+          "example": "'World War I' -> 'PRECEDES' -> 'World War II'"
+        },
+        {
+          "name": "CONTRASTS_WITH",
+          "description": "두 이데올로기, 시스템, 또는 사건이 핵심 속성에서 근본적으로 '대립'하거나 '대조'됨.",
+          "example": "'Capitalism' -> 'CONTRASTS_WITH' -> 'Communism'"
+        },
+        {
+          "name": "IS_AN_EXAMPLE_OF",
+          "description": "특정 사건이나 인물이 더 큰 역사적 '개념'이나 '범주'의 구체적인 사례가 됨.",
+          "example": "'British rule in India' -> 'IS_AN_EXAMPLE_OF' -> 'Imperialism'"
+        }
+      ]
+    }
+  }
+}

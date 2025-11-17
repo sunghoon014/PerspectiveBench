@@ -1,0 +1,69 @@
+{
+  "relation_palette_hypothesis": {
+    "causal_relations": {
+      "description": "물리적 현상의 원인, 결과, 구성요소, 수학적 정의를 설명합니다.",
+      "relations": [
+        {
+          "name": "CAUSES",
+          "description": "하나의 물리 현상이나 작용이 다른 현상이나 상태 변화의 직접적인 원인이 됨.",
+          "example": "'Force' -> 'CAUSES' -> 'Acceleration'"
+        },
+        {
+          "name": "IS_DEFINED_BY",
+          "description": "개념이 다른 개념들의 수학적/형식적 관계로 정의됨.",
+          "example": "'Momentum' -> 'IS_DEFINED_BY' -> 'Mass'"
+        },
+        {
+          "name": "ENABLES_FUNCTION",
+          "description": "특정 조건이나 법칙이 특정 기능이나 현상을 가능하게 함.",
+          "example": "'Conservative Force' -> 'ENABLES_FUNCTION' -> 'Conservation of Mechanical Energy'"
+        },
+        {
+          "name": "EXPLAINS_PHENOMENON",
+          "description": "물리 법칙이나 이론이 특정 관찰 가능한 현상을 설명함.",
+          "example": "'Conservation of Momentum' -> 'EXPLAINS_PHENOMENON' -> 'Recoil of a Gun'"
+        },
+        {
+          "name": "REDUCES",
+          "description": "하나의 요인(힘 등)이 다른 물리량의 크기를 감소시킴.",
+          "example": "'Friction' -> 'REDUCES' -> 'Mechanical Energy'"
+        },
+        {
+          "name": "HAS_COMPONENT",
+          "description": "시스템이나 벡터가 특정 구성 요소를 가짐.",
+          "example": "'Vector' -> 'HAS_COMPONENT' -> 'X-Component'"
+        }
+      ]
+    },
+    "comparative_relations": {
+      "description": "개념 간의 계층, 차이점, 대안적 관점을 명확히 합니다.",
+      "relations": [
+        {
+          "name": "IS_AN_ALTERNATIVE_TO",
+          "description": "두 개념이나 법칙이 동일한 현상을 분석하는 '대안적인 관점'이나 '프레임워크'를 제공함.",
+          "example": "'[Conservation of Energy]' -> 'IS_AN_ALTERNATIVE_TO' -> '[Newtonian Force Analysis]'"
+        },
+        {
+          "name": "CONTRASTS_WITH",
+          "description": "두 개념이 핵심 속성에서 근본적인 차이를 보임.",
+          "example": "'Momentum (Vector)' -> 'CONTRASTS_WITH' -> 'Energy (Scalar)'"
+        },
+        {
+          "name": "IS_A_TYPE_OF",
+          "description": "개념이 더 넓은 상위 범주에 속함.",
+          "example": "'Kinetic Energy' -> 'IS_A_TYPE_OF' -> 'Mechanical Energy'"
+        }
+      ]
+    },
+    "temporal_procedural_relations": {
+      "description": "개념의 논리적 선후 관계를 설명합니다.",
+      "relations": [
+        {
+          "name": "PRECEDES",
+          "description": "논리적 선행 관계. 개념 A가 개념 B를 이해하거나 적용하기 위해 먼저 정의되어야 함.",
+          "example": "'Force' -> 'PRECEDES' -> 'Work (Force * Distance)'"
+        }
+      ]
+    }
+  }
+}

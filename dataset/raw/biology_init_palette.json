@@ -1,0 +1,84 @@
+{
+  "relation_palette_hypothesis": {
+    "process_and_pathway_relations": {
+      "description": "생명 현상이 일어나는 '순차적 과정'이나 '화학적 경로'를 설명합니다. (e.g., Central Dogma, Cellular Respiration)",
+      "relations": [
+        {
+          "name": "IS_A_STEP_IN_PROCESS",
+          "description": "A가 B라는 더 큰 생물학적 프로세스/경로의 순차적인 단계를 구성함.",
+          "example": "'Transcription' -> 'IS_A_STEP_IN_PROCESS' -> 'Protein Synthesis'"
+        },
+        {
+          "name": "REQUIRES_INPUT",
+          "description": "특정 프로세스나 반응이 일어나기 위해 반드시 필요한 전제 물질, 조건 또는 에너지.",
+          "example": "'Cellular Respiration' -> 'REQUIRES_INPUT' -> 'Glucose'"
+        },
+        {
+          "name": "PRODUCES_OUTPUT",
+          "description": "프로세스나 반응이 완료된 후 생성되는 핵심 산물.",
+          "example": "'Photosynthesis' -> 'PRODUCES_OUTPUT' -> 'Oxygen'"
+        },
+        {
+          "name": "IS_A_CYCLE_OF",
+          "description": "프로세스가 선형이 아닌, 순환적인 경로를 통해 반복됨.",
+          "example": "'Citric Acid Cycle' -> 'IS_A_CYCLE_OF' -> 'Metabolic Reactions'"
+        }
+      ]
+    },
+    "functional_and_structural_relations": {
+      "description": "생물학적 구조물의 '기능(목적)'과 '물리적 위치/구성'을 설명합니다.",
+      "relations": [
+        {
+          "name": "SERVES_FUNCTION",
+          "description": "특정 구조물(e.g., 기관, 분자)이 시스템 내에서 수행하는 핵심 '기능' 또는 '역할'. (물리학의 'ENABLES'보다 더 직접적인 '목적성'을 가짐)",
+          "example": "'Mitochondria' -> 'SERVES_FUNCTION' -> 'ATP Synthesis'"
+        },
+        {
+          "name": "IS_PART_OF",
+          "description": "개념이 더 큰 생물학적 '구조'의 구성 요소임 (e.g., 세포 소기관 -> 세포)",
+          "example": "'Ribosome' -> 'IS_PART_OF' -> 'Cellular Machinery'"
+        },
+        {
+          "name": "IS_LOCATED_IN",
+          "description": "특정 프로세스나 구조물이 발견되는 물리적 '위치' 또는 '구획'.",
+          "example": "'Glycolysis' -> 'IS_LOCATED_IN' -> 'Cytoplasm'"
+        }
+      ]
+    },
+    "regulatory_and_control_relations": {
+      "description": "생물학적 프로세스가 '어떻게' 제어되고 조절되는지(촉진, 억제) 설명합니다. (e.g., Gene Expression)",
+      "relations": [
+        {
+          "name": "ACTIVATES_OR_PROMOTES",
+          "description": "특정 분자나 신호가 다른 프로세스나 유전자의 발현을 '촉진'하거나 '활성화'함.",
+          "example": "'Lac Operon (Inducer)' -> 'ACTIVATES_OR_PROMOTES' -> 'Gene Transcription'"
+        },
+        {
+          "name": "INHIBITS_OR_REPRESSES",
+          "description": "특정 분자나 신호가 다른 프로세스나 유전자의 발현을 '억제'하거나 '비활성화'함.",
+          "example": "'ATP (High Levels)' -> 'INHIBITS_OR_REPRESSES' -> 'Cellular Respiration (Feedback Inhibition)'"
+        }
+      ]
+    },
+    "comparative_and_taxonomic_relations": {
+      "description": "개념 간의 계층, 차이점, 대안적 경로를 명확히 합니다.",
+      "relations": [
+        {
+          "name": "IS_A_TYPE_OF",
+          "description": "개념이 더 넓은 상위 범주에 속함. (물리학과 동일)",
+          "example": "'Cellular Respiration' -> 'IS_A_TYPE_OF' -> 'Metabolism'"
+        },
+        {
+          "name": "CONTRASTS_WITH",
+          "description": "두 개념이 핵심 속성(e.g., 과정, 기능)에서 근본적인 차이를 보임.",
+          "example": "'Photosynthesis' -> 'CONTRASTS_WITH' -> 'Cellular Respiration'"
+        },
+        {
+          "name": "IS_AN_ALTERNATIVE_TO",
+          "description": "동일한 목적을 달성하기 위한 '대안적인 생물학적 경로'를 제공함. (물리학의 '대안적 프레임워크'와 유사)",
+          "example": "'Anaerobic Respiration' -> 'IS_AN_ALTERNATIVE_TO' -> 'Aerobic Respiration'"
+        }
+      ]
+    }
+  }
+}

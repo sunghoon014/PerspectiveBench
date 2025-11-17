@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "name": "Python Debugger: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true // true or false
+    },
+    {
+      "name": "Python Debugger: FastAPI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "run",
+      "args": [
+        "-p",
+        "8000",
+      ],
+      "jinja": true,
+      "justMyCode": true // true or false
+    },
+  ]
+}
