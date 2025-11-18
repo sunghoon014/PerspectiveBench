@@ -55,7 +55,7 @@ The pipeline is organized into sequential steps, with each script performing a d
 1.  **Clone the repository:**
     ```bash
     git clone <repository-url>
-    cd www
+    cd PerspectiveBench
     ```
 
 2.  **Create a virtual environment and install dependencies:**
