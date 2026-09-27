@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "subject": "demo",
+    "source": "luma_manual.txt#operation",
+    "text": "In the fictional Luma irrigation system, the Luma controller opens the Luma gate by sending an open command. The Luma gate permits water flow when open. The Luma gate stops water flow when closed."
+  },
+  {
+    "id": 1,
+    "subject": "demo",
+    "source": "luma_manual.txt#monitoring",
+    "text": "In the fictional Luma irrigation system, the Luma controller monitors the Luma gate by receiving a position report. The position report states whether the Luma gate is open or closed. Receiving a position report does not change the gate position."
+  },
+  {
+    "id": 2,
+    "subject": "demo",
+    "source": "luma_manual.txt#alarm",
+    "text": "In the fictional Luma irrigation system, the Luma flow sensor measures water flow downstream of the Luma gate. The Luma controller compares the measured flow with the expected flow. The Luma controller activates an alarm when the measured flow differs from the expected flow."
+  }
+]

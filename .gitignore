@@ -1,0 +1,29 @@
+.venv
+.env
+data/logs
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+ ../.DS_Store
+
+# OS
+.DS_Store
+
+# Local configuration, generated results and editor state
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.vscode/
+.ruff_cache/
+outputs/
+dataset/processed/
+
+# User-provided construction corpora and per-corpus configuration
+dataset/raw/
+dataset/custom/
+config/custom.yaml

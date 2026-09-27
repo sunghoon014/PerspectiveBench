@@ -1,0 +1,29 @@
+{
+  "relation_palette_hypothesis": {
+    "operation": {
+      "description": "Relations that change the state of a component.",
+      "relations": [
+        {
+          "name": "OPENS",
+          "description": "A sends a command that puts B in an open state.",
+          "example": "Luma controller -- OPENS --> Luma gate"
+        },
+        {
+          "name": "PERMITS",
+          "description": "The state of A allows B to occur.",
+          "example": "Open Luma gate -- PERMITS --> Water flow"
+        }
+      ]
+    },
+    "monitoring": {
+      "description": "Relations that observe a component without changing its state.",
+      "relations": [
+        {
+          "name": "MONITORS",
+          "description": "A receives information about the state of B.",
+          "example": "Luma controller -- MONITORS --> Luma gate"
+        }
+      ]
+    }
+  }
+}
